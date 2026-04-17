@@ -1,0 +1,16 @@
+name: Report a data error
+description: Describe an issue in an arbitrary form.
+title: "[Data error]: <insert the file name here>"
+labels: ["report-error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking you time to improve our database!
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue description
+      description: Please, tell us what do you believe is incorrect about this product description? How it should be improved?
+    validations:
+      required: true

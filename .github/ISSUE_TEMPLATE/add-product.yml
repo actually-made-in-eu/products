@@ -1,0 +1,405 @@
+name: Add a product
+description: Add a new product into the database.
+title: "[Add product]: <insert the name of the product here>"
+labels: ["add-product"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking you time to contribute to our database!
+        Please review the [FAQ](https://actually-made-in.eu/faq) to ensure the product you want to add fits the database.
+        Please make sure we don't have the product in the database yet: search both the website and this repository.
+  - type: markdown
+    attributes:
+      value: |
+        Please fill in information regarding the product(s) as precise as possible:
+  - type: input
+    id: urlTitle
+    attributes:
+      label: Company / product title
+      description: Company title or a short product description
+      placeholder: ex. The bestest European company
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Insert here a link to the product page
+      placeholder: ex. https://example.org/
+    validations:
+      required: true
+  - type: input
+    id: confirmationUrl
+    attributes:
+      label: Confirmation URL
+      description: On what page can one see evidence that this product is manufactured in Europe?
+      placeholder: ex. https://example.org/about-us/
+    validations:
+      required: true
+  - type: textarea
+    id: confirmationDescription
+    attributes:
+      label: Confirmation text
+      description: Insert here a direct quote from that page that clearly shows that the product is manufactured in Europe.
+      placeholder: ex. Our socks are made locally in Sweden
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: 	Insert a list of tags you suggest to associate with the product. Use commas or spaces to separate tags.
+      placeholder: ex. electronics:computer:laptop, clothes:shoes:dress:oxford
+    validations:
+      required: true
+  - type: dropdown
+    id: countryManufactured
+    attributes:
+      label: Manufacturer's location
+      description: Where are the products being physically manufactured?
+      multiple: true
+      options:
+        - Europe (undetermined)
+        - Åland Islands
+        - Albania
+        - Andorra
+        - Anguilla
+        - Armenia
+        - Austria
+        - Belarus
+        - Belgium
+        - Bermuda
+        - Bonaire, Sint Eustatius and Saba
+        - Bosnia and Herzegovina
+        - British Indian Ocean Territory
+        - Bulgaria
+        - Cayman Islands
+        - Croatia
+        - Cyprus
+        - Czechia
+        - Denmark
+        - Estonia
+        - Falkland Islands (Malvinas)
+        - Faroe Islands
+        - Finland
+        - France
+        - French Guiana
+        - French Polynesia
+        - French Southern Territories
+        - Georgia
+        - Germany
+        - Gibraltar
+        - Greece
+        - Greenland
+        - Guadeloupe
+        - Guernsey
+        - Holy See
+        - Hungary
+        - Iceland
+        - Ireland
+        - Isle of Man
+        - Italy
+        - Jersey
+        - Latvia
+        - Liechtenstein
+        - Lithuania
+        - Luxembourg
+        - Malta
+        - Martinique
+        - Mayotte
+        - Moldova, Republic of
+        - Monaco
+        - Montenegro
+        - Montserrat
+        - Netherlands
+        - New Caledonia
+        - North Macedonia
+        - Norway
+        - Pitcairn
+        - Poland
+        - Portugal
+        - Réunion
+        - Romania
+        - Saint Barthélemy
+        - Saint Helena, Ascension and Tristan da Cunha
+        - Saint Martin (French)
+        - Saint Pierre and Miquelon
+        - San Marino
+        - Serbia
+        - Slovakia
+        - Slovenia
+        - South Georgia and the South Sandwich Islands
+        - Spain
+        - Svalbard and Jan Mayen
+        - Sweden
+        - Switzerland
+        - Turks and Caicos Islands
+        - Ukraine
+        - United Kingdom of Great Britain and Northern Ireland
+        - Virgin Islands (British)
+        - Wallis and Futuna
+    validations:
+      required: true
+  - type: dropdown
+    id: countryHQ
+    attributes:
+      label: HQ country
+      description: 	If known, please specify the country of the top-most company in the whole ownership chain. Note that sometimes a manufacturing company might be part of a group of companies, or owned by a holding entity, or by a private equity fund.
+      multiple: true
+      options:
+        - Afghanistan
+        - Åland Islands
+        - Albania
+        - Algeria
+        - American Samoa
+        - Andorra
+        - Angola
+        - Anguilla
+        - Antarctica
+        - Antigua and Barbuda
+        - Argentina
+        - Armenia
+        - Aruba
+        - Australia
+        - Austria
+        - Azerbaijan
+        - Bahamas
+        - Bahrain
+        - Bangladesh
+        - Barbados
+        - Belarus
+        - Belgium
+        - Belize
+        - Benin
+        - Bermuda
+        - Bhutan
+        - Bolivia, Plurinational State of
+        - Bonaire, Sint Eustatius and Saba
+        - Bosnia and Herzegovina
+        - Botswana
+        - Bouvet Island
+        - Brazil
+        - British Indian Ocean Territory
+        - Brunei Darussalam
+        - Bulgaria
+        - Burkina Faso
+        - Burundi
+        - Cabo Verde
+        - Cambodia
+        - Cameroon
+        - Canada
+        - Cayman Islands
+        - Central African Republic
+        - Chad
+        - Chile
+        - China
+        - Christmas Island
+        - Cocos(Keeling) Islands
+        - Colombia
+        - Comoros
+        - Congo
+        - Congo, Democratic Republic of the
+        - Cook Islands
+        - Costa Rica
+        - Côte d'Ivoire
+        - Croatia
+        - Cuba
+        - Curaçao
+        - Cyprus
+        - Czechia
+        - Denmark
+        - Djibouti
+        - Dominica
+        - Dominican Republic
+        - Ecuador
+        - Egypt
+        - El Salvador
+        - Equatorial Guinea
+        - Eritrea
+        - Estonia
+        - Eswatini
+        - Ethiopia
+        - Falkland Islands (Malvinas)
+        - Faroe Islands
+        - Fiji
+        - Finland
+        - France
+        - French Guiana
+        - French Polynesia
+        - French Southern Territories
+        - Gabon
+        - Gambia
+        - Georgia
+        - Germany
+        - Ghana
+        - Gibraltar
+        - Greece
+        - Greenland
+        - Grenada
+        - Guadeloupe
+        - Guam
+        - Guatemala
+        - Guernsey
+        - Guinea
+        - Guinea - Bissau
+        - Guyana
+        - Haiti
+        - Heard Island and McDonald Islands
+        - Holy See
+        - Honduras
+        - Hong Kong
+        - Hungary
+        - Iceland
+        - India
+        - Indonesia
+        - Iran, Islamic Republic of
+        - Iraq
+        - Ireland
+        - Isle of Man
+        - Israel
+        - Italy
+        - Jamaica
+        - Japan
+        - Jersey
+        - Jordan
+        - Kazakhstan
+        - Kenya
+        - Kiribati
+        - Korea, Democratic People's Republic of
+        - Korea, Republic of
+        - Kuwait
+        - Kyrgyzstan
+        - Lao People's Democratic Republic
+        - Latvia
+        - Lebanon
+        - Lesotho
+        - Liberia
+        - Libya
+        - Liechtenstein
+        - Lithuania
+        - Luxembourg
+        - Macao
+        - Madagascar
+        - Malawi
+        - Malaysia
+        - Maldives
+        - Mali
+        - Malta
+        - Marshall Islands
+        - Martinique
+        - Mauritania
+        - Mauritius
+        - Mayotte
+        - Mexico
+        - Micronesia, Federated States of
+        - Moldova, Republic of
+        - Monaco
+        - Mongolia
+        - Montenegro
+        - Montserrat
+        - Morocco
+        - Mozambique
+        - Myanmar
+        - Namibia
+        - Nauru
+        - Nepal
+        - Netherlands
+        - New Caledonia
+        - New Zealand
+        - Nicaragua
+        - Niger
+        - Nigeria
+        - Niue
+        - Norfolk Island
+        - North Macedonia
+        - Northern Mariana Islands
+        - Norway
+        - Oman
+        - Pakistan
+        - Palau
+        - Palestine, State of
+        - Panama
+        - Papua New Guinea
+        - Paraguay
+        - Peru
+        - Philippines
+        - Pitcairn
+        - Poland
+        - Portugal
+        - Puerto Rico
+        - Qatar
+        - Réunion
+        - Romania
+        - Russian Federation
+        - Rwanda
+        - Saint Barthélemy
+        - Saint Helena, Ascension and Tristan da Cunha
+        - Saint Kitts and Nevis
+        - Saint Lucia
+        - Saint Martin (French)
+        - Saint Pierre and Miquelon
+        - Saint Vincent and the Grenadines
+        - Samoa
+        - San Marino
+        - Sao Tome and Principe
+        - Saudi Arabia
+        - Senegal
+        - Serbia
+        - Seychelles
+        - Sierra Leone
+        - Singapore
+        - Sint Maarten (Dutch)
+        - Slovakia
+        - Slovenia
+        - Solomon Islands
+        - Somalia
+        - South Africa
+        - South Georgia and the South Sandwich Islands
+        - South Sudan
+        - Spain
+        - Sri Lanka
+        - Sudan
+        - Suriname
+        - Svalbard and Jan Mayen
+        - Sweden
+        - Switzerland
+        - Syrian Arab Republic
+        - Taiwan
+        - Tajikistan
+        - Tanzania, United Republic of
+        - Thailand
+        - Timor - Leste
+        - Togo
+        - Tokelau
+        - Tonga
+        - Trinidad and Tobago
+        - Tunisia
+        - Türkiye
+        - Turkmenistan
+        - Turks and Caicos Islands
+        - Tuvalu
+        - Uganda
+        - Ukraine
+        - United Arab Emirates
+        - United Kingdom of Great Britain and Northern Ireland
+        - United States Minor Outlying Islands
+        - United States of America
+        - Uruguay
+        - Uzbekistan
+        - Vanuatu
+        - Venezuela, Bolivarian Republic of
+        - Viet Nam
+        - Virgin Islands (British)
+        - Virgin Islands (U.S.)
+        - Wallis and Futuna
+        - Western Sahara
+        - Yemen
+        - Zambia
+        - Zimbabwe
+  - type: textarea
+    id: note
+    attributes:
+      label: Note
+      description: Is there anything else you'd like to add regarding this product? Are there any points of attention for a consumer to watch for?
+      placeholder: ex. Only the "OLIMPOS" collections is marked as made in Spain.
