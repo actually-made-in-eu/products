@@ -1,0 +1,9 @@
+url: https://ikea.com
+urlTitle: IKEA
+countryManufactured: [EU]
+countryHQ: NL
+tags:
+  - home
+confirmationDescription: "While there are no confirmation on the website, in reality many IKEA products are manufactured in European countries - that's what said on that very products."
+confirmationUrl: https://ikea.com
+note: "Do not choose online — go to the store: often the manufacturing country will be specified on the product."
